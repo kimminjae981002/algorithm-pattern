@@ -1,3 +1,5 @@
+// 다중 포인터 패턴
+
 function sumZero(arr) {
     let answer = 0;
     for (let i = 0; i < arr.length; i++) {
