@@ -4,6 +4,7 @@
 function maxSubarraySum(arr, n) {
     arr.sort();
     return arr[arr.length - 1] + n
+    // 제일 큰 값과 n을 더하는 줄 알았다.
 }
 
 console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2))
