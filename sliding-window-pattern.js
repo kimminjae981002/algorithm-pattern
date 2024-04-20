@@ -24,9 +24,7 @@ function maxSubarraySum(arr, n) {
         sum1 = arr[max] + arr[max - 1];
         sum2 = arr[max] + arr[max + 1];
     };
-
     return sum1 > sum2 ? sum1 : sum2;
-
 }
 
 console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2))
