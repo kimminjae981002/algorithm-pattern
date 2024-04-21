@@ -22,14 +22,14 @@ function search(arr, n) {
 
         if (arr[middle] < n) {
             min = middle + 1;
-        }
+        }// 중간 지점보다 숫자가 크다면 중간 지점을 더 높게 올린다.
         else if (arr[middle] > n) {
             max = middle - 1;
-        }
+        }// 중간 지점보다 숫자가 작다면 중간 지점을 낮춘다.
         else {
             return middle;
         }
     }
  }
  
- console.log(search([1,2,3,4,5,6,7], 4))
+ console.log(search([1,2,3,4,5,6,7], 5))
