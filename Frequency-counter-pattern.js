@@ -111,4 +111,50 @@ function validAnagram(first, second) {
     return true
 }
 
-console.log(validAnagram('svc','vcs'))
+console.log(validAnagram('svc', 'vcs'))
+
+// 연습 문제
+function sameFrequency(a, b) {
+    // good luck. Add any arguments you deem necessary.
+    let lookup = {};
+    const arrA = a.toString().split('');
+    const arrB = b.toString().split('');
+
+    for (let aa of arrA) {
+        lookup[aa] ? lookup[aa] += 1 : lookup[aa] = 1;
+    };
+
+    for (let bb of arrB) {
+        if (!(lookup[bb])) {
+            return false;
+        } else {
+            lookup[bb] -= 1;
+        }
+    }
+
+    return true;
+}
+
+  
+console.log(sameFrequency(182, 281))
+
+function areThereDuplicates(...arguments) {
+    let lookup1 = {};
+
+    for (let a of arguments) {
+        lookup1[a] ? lookup1[a] += 1 : lookup1[a] = 1;
+    }
+
+    let answer = false;
+
+    // 중복 확인하면 반복문 빠져나온다.
+    for (let b in lookup1) {
+        if (lookup1[b] > 1) {
+            answer = true;
+            break;
+        }
+    }
+    return answer;
+}
+
+console.log(areThereDuplicates(1,2,3,4,1))
