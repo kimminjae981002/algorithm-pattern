@@ -1,6 +1,22 @@
 // 버블 정렬
 
 // 오름차순으로 만들기
+
+function sort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        // 변수에 저장해두고 값을 바꿔준다.
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+
+  return arr;
+}
+
 function sort(arr) {
   // 맨 마지막 배열이 다음에 값이 없는데 비교를 하기 때문에
   // arr.length를 값으러 넣고 점점 줄여간다.
@@ -29,6 +45,29 @@ function sort(arr) {
         swap(arr, j, j + 1);
       }
     }
+  }
+
+  return arr;
+}
+
+// 버블 정렬 최적화
+// 눈으로 봤을 때 정렬이 되었음에도 불구하고 계속해서 값을 확인한다.
+function sort(arr) {
+  // 맨 마지막 배열이 다음에 값이 없는데 비교를 하기 때문에
+  // arr.length를 값으러 넣고 점점 줄여간다.
+  let noSwaps;
+  for (let i = arr.length; i > 0; i--) {
+    noSwaps = true;
+    for (let j = 0; j < i - 1; j++) {
+      // 변수에 저장해둠.
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+        noSwaps = false;
+      }
+    }
+    if (noSwaps) break;
   }
 
   return arr;
