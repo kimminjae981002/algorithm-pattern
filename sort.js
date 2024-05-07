@@ -76,6 +76,7 @@ function sort(arr) {
 console.log(sort([5, 8, 61, 2]));
 
 // 선택 정렬
+// 코드 이해 불가
 
 function selectionSort(arr) {
   for (var i = 0; i < arr.length; i++) {
