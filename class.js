@@ -4,8 +4,12 @@ class Student {
     this.lastName = lastName;
     this.year = year;
   }
+
+  hello() {
+    return `Welcome! ${this.firstName}${this.lastName}!!`;
+  }
 }
 
 const user1 = new Student("kim", "minjae");
 
-console.log(user1.firstName);
+console.log(user1.hello());
